@@ -1,0 +1,78 @@
+Grumpy cat line 16-20:
+
+<div class="container">
+
+	<div class="jumbotron bg-primary text-center">
+		<h1>Grumpy Cat Fan Page!</h1>
+	</div>
+
+
+Boo:
+
+<div class="container">
+
+<div class="jumbotron bg-primary text-center">		add indent
+		Boo The Dog Fan Page!			add <h1></h1>
+	</div>
+
+
+Boo Line 21-33: delete all 
+
+		<div class="row">			
+
+	<div class="col-sm-12">			
+		<div class="panel panel-primary">	
+		<div class="panel-heading">Instructions</div>
+			<div class="panel-body text-center">
+					<h4>Oh no! Someone has vandalized our Boo 'The Cutest Dog In The World' fanpage!</h4>
+				<h4>There are a bunch of errors on this page!</h4>
+				<h4>Try your best to find them all!</h4>
+				</div>
+				</div>
+		</div>
+	</div>
+
+Grumpy Line 21-27:
+
+	<div class="row">
+	
+		<div class="col-sm-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">About Grumpy Cat</div>
+				<div class="panel-body">
+
+Boo:
+
+		<div class="row">  						delete one indent, add one row between line 22 and 23
+			<div class="col-sm-6">						
+			<div class="panel panel-primary">
+				<div class="panel-heading">About Boo</div>
+				<div class="panel-body">
+						<p>Boo the dog belongs to a San Francisco-based Facebook employee who created a Facebook page for the dog with a statement "My name is Boo. I am a dog. Life is good." He became popular in October 2010 after singer Ke$ha sent a tweet that she had a new boyfriend, linking to the page.</p>
+
+Boo line 28-39:
+
+Break sentences up into sections using <p></p>.
+
+The url link should be in the following format: <a href="https://en.wikipedia.org/wiki/Boo_(dog)">https://en.wikipedia.org/wiki/Boo_(dog)</a>
+
+Grumpy Cat Line 43-54
+
+	<div class="col-sm-6">
+			<div class="well text-center">
+				<div>
+					<img class="img-responsive" src="http://pre10.deviantart.net/1d23/th/pre/i/2013/070/1/e/grumpy_cat_by_bwcopy-d5xod2v.jpg">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<br><br>
+
+
+Boo: fixed <div></div> positions
+
+image should be in the this format: <img class="img-responsive" src="https://img.buzzfeed.com/buzzfeed-static/static/2015-04/21/16/enhanced/webdr05/enhanced-31550-1429646952-7.jpg">
+
+

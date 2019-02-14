@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- Added link to the jQuery Library -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+     <!-- Added a link to Bootstrap-->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+<div id="game">
+<!-- FOUR crystals displayed as buttons -->
+
+    <img src=BLUEOFSPADES.JPG id="blueOfSpades" class="crystal">       
+    <img src=YELLOWOFDIAMONDS.jpg id="yellowOfDiamonds" class="crystal">
+    <img src=REDOFHEARTS.JPG id="redOfHearts" class="crystal">
+    <img src=GREENOFCLUBS.JPG id="greenOfClubs" class="crystal">
+    
+    
+
+    <h1>Target Number</h1>
+    <h2 class="targetNum" id="random-number"></h2>
+
+    <!-- <h2 class="CRYSTALNum" id="BLUENUM"></h2>
+    <h2 class="CRYSTALNum" id="YELLOWNUM"></h2>
+    <h2 class="CRYSTALNum" id="REDNUM"></h2>
+    <h2 class="CRYSTALNum" id="GREENNUM"></h2> -->
+    <h2 class="PLAYERScore">Player Score</h2>
+    <h2 id="player-score"></h2>
+</div>   
+   
+    
+<style>
+
+body {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#game {
+    margin-top: 50px;
+    color: white;
+}
+.crystal{
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+    float: right;
+}
+</style>
+<script>
+
+
+//The player will be shown a random number BETWEEN 19-120 at the start of the game.
+$(document).ready(function () {
+    var playerScore = [];
+    var blue = Math.floor((Math.random() * 12) + 1);
+    var yellow = Math.floor((Math.random() * 12) + 1);
+
+    $("#random-number").html(Math.floor((Math.random() * (120-19)) + 19));
+ 
+ //Each crystal as random hidden value BETWEEN 1 - 12   
+    $("#blueOfSpades").click(function () {
+        $("#player-score").html(playerScore + blue);
+    });
+    $("#yellowOfDiamonds").click(function () {
+        $("#player-score").html(playerScore + yellow);
+    });
+    $("#redOfHearts").click(function () {
+        $("#REDNUM").html(Math.floor((Math.random() * 12) + 1));
+    });
+    $("#greenOfClubs").click(function () {
+        $("#GREENNUM").html(Math.floor((Math.random() * 12) + 1));
+    });
+
+//When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
+// Your game will hide this amount until the player clicks a crystal.
+// When they do click one, update the player's score counter.
+
+
+
+//NO CODE BELOW THIS LINE
+//-----------------------------------------------------------------------------------------------------------
+});
+
+
+
+
+</script>
+
+
+
+
+
+
+//When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
+Your game will hide this amount until the player clicks a crystal.
+When they do click one, update the player's score counter.
+The player wins if their total score matches the random number from the beginning of the game.
+The player loses if their score goes above the random number.
+The game restarts whenever the player wins or loses.
+        
+ When the game begins again, the player should see a new random number. 
+ Also, all the crystals will have four new hidden values. 
+ Of course, the user's score (and score counter) will reset to zero.
+        
+        
+        
+The app should show the number of games the player wins and loses. 
+To that end, do not refresh the page as a means to restart the game.
+
+bonus: user can create a profile in firebase-->
+</body>
+</html>

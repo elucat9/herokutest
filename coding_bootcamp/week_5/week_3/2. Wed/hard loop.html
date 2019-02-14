@@ -1,0 +1,31 @@
+<head>
+    <meta charset="UFT-8">
+    <title>Partners Loop</title>
+</head>
+
+<body>
+    <script>
+        // starting myFarm array
+        var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+
+        // creating a variable to hold our array length
+        var arrayLength = myFarm.Length;
+
+        // looping through our myFarm array
+        for (var j = 0; j < arrayLength; j++) {
+            // console out the farm animals in the current index
+            console.log(myFarm[j]);
+
+            // If the first character in the current animal is
+            // "c" or "o", alert
+            if (myFarm[j].charAt(0) === "c" || myFarm[j].charAt(0) === "o") {
+                alert("Starts with a c or an o!")
+            }
+
+            if (myFarm[j].charAt(0) === "c" && myFarm[j].charAt(1) === "h") {
+                console.log("PROLLY A CHICKEN")
+            }
+        }
+
+    </script>
+</body>

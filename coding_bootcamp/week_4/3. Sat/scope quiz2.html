@@ -1,0 +1,29 @@
+// Situation 2
+// ------------------------------------------
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>lexicalScope</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        var myVar2 = 1;
+
+        function a2() {
+            var myVar2 = 5 - 3;
+            b2();
+            alert("Q2 | a: " + myVar2);
+        }
+
+        function b2() {
+            alert("Q2 | b: " + myVar2);
+        }
+        a2();
+    </script>
+</body>
+</html>

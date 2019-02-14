@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+var word = "Hangman" //This is the word for the game
+var obj;
+var output;
+var count = 0; //This variable holds the number of mistakes
+var init = function() { //in this function the word is split into letters and made an object to categorize letters
+	word = word.toLowerCase().split(""); // make word lowercase and split to an array of letters ['h','a','n','g','m','a','n']
+	obj = oc(word); // create an object {'a':'i','g':'i','m':'i','n':'i'}
+	draw(); //draw the first time _ _ _ _ _ _ _
+}
+
+function draw() { // this function draws a '_' if the letter is not yet guessed and the letter if the letter is guessed
+	output = ''; // reset the temporary output string
+	for(var i = 0; i < word.length; i++) { // loop through all the letters
+		if(obj[word[i]] == 'i') { // if the letter in the object has an i (i means not guessed yet) word[i] is the letter on the ith (1st, 2nd etc) place obj[letter] returns the state of the given letter
+			output += '_ '; // add _ to the output
+		}else{ 
+			output += word[i] + ' '; // add the letter to the output, because it is already guessed
+		}
+	}
+	
+	output += ' ' + count; // optional: add the number of mistakes to the output
+	
+	$('output').innerHTML = output; // print the output in the output container
+}
+
+function Test(letter) { //This function checks if the chosen letter is valid
+	if(letter in obj)  { // if the letter is in obj
+		obj[letter] = 'a'; // set the value of the letter to 'a' (not 'i')
+	} else {
+		count++; // wrong, mistake + 1
+	}
+	draw(); // draw the line
+	var winning = true; // if this variable doesn't change the player won
+	for (var a in obj) { // loop through the object (all the used letters)
+		if(obj[a]=='i') { // this letter is not guessed yet
+			winning = false; // so winning is false
+			break; // break the loop, the user has not won yet
+		}
+	}
+	
+	if (winning) { // if the user won
+		alert('You won!');
+	}
+}
+
+Object.size = function(obj) { //misc. function for counting the number of letters in the object
+    var size = 0, key;
+    for (key in obj) {
+        if (obj.hasOwnProperty(key)) size++;
+    }
+    return size;
+};
+
+function oc(a) //misc. function for creating an objec from a function
+{
+  var o = {};
+  for(var i=0;i<a.length;i++)
+  {
+    o[a[i]]='i';
+  }
+  return o;
+}
+
+var $ = function(id){return document.getElementById(id);} //misc. function for making selecting elements easier.
+</script>
+</head>
+
+<body onload="init()">
+<div id="output"></div>
+<input type="text" id="letter"/>
+<button onclick="Test($('letter').value);$('letter').value=''">move</button>
+</body>

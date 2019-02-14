@@ -1,0 +1,8 @@
+p.styledFont{
+    color: purple;
+    text-align: center;
+}
+
+#styledImage {
+    border: 50px groove blanchedalmond;
+}

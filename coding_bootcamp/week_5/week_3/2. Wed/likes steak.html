@@ -1,0 +1,20 @@
+<head>
+    <meta charset="UFT-8">
+    <title>Partners Loop</title>
+</head>
+
+<body>
+    <script>
+        var likesSteak = confirm("Do you like steak?");
+        var likesChicken = confirm("Do you like chicken?");
+        if (likesChicken || likesSteak) {
+            console.log("NOT VEGAN");
+        }
+        else if (likesChicken && likesSteak) {
+            console.log("LIKES IT ALL");
+        }
+        else {
+            console.log("vegan maybe");
+        }
+    </script>
+</body>

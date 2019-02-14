@@ -1,0 +1,106 @@
+1. add <p> breaks between sentences to make paragraphs for Boo's bio
+grumpy cat website: Read more at: <a href="https://en.wikipedia.org/wiki/Grumpy_Cat">https://en.wikipedia.org/wiki/Grumpy_Cat</a>
+	  boo website: Read more at: <a href="">https://en.wikipedia.org/wiki/Boo_(dog)</a>
+should be: Read more at: <a href="https://en.wikipedia.org/wiki/Boo_(dog)>https://en.wikipedia.org/wiki/Boo_(dog)</a>
+
+2. grumpy: <img class="img-responsive" src="http://pre10.deviantart.net/1d23/th/pre/i/2013/070/1/e/grumpy_cat_by_bwcopy-d5xod2v.jpg">
+   boo:img class="img-responsive" src="https://img.buzzfeed.com/buzzfeed-static/static/2015-04/21/16/enhanced/webdr05/enhanced-31550-1429646952-7.jpg"
+
+should be: <img class="img-responsive" src="https://img.buzzfeed.com/buzzfeed-static/static/2015-04/21/16/enhanced/webdr05/enhanced-31550-1429646952-7.jpg">
+
+3. grumpy: <ol>
+		<li>Sleep</li>
+		<li>Food</li>
+		<li>Catnip</li>
+		<li>Pizza</li>
+		<li>Not Liking Things</li>
+	   </ol>
+
+    boo: <ol>
+		Dressing Up
+		Eating Grass
+		Sleeping
+		Swimming
+		Hiking
+	 </ol>
+
+If I want a numbered list, items should be in this format: <li>Dressing Up</li> 
+
+4. grumpy:
+
+	<div class="row text-center">
+			
+		<div class="col-sm-6">
+			<button class="btn" id="boxGrow">Grow</button>
+			<button class="btn" id="boxShrink">Shrink</button>
+			<br>
+			<br>
+			<div class="well text-center">
+				<img id="box" src="http://img10.deviantart.net/459b/i/2014/181/4/8/grumpy_cat_by_elicoronel16-d7on00y.png">
+			</div>
+		</div>
+
+
+boo:
+add: <div class="row text-center"> in front of:
+	<div class="col-sm-6">
+
+5. grumpy js: 
+
+// When the boxGrow button is clicked... 
+$("#boxGrow").on("click", function() {
+	// Increase the size of the box.
+	$("#box").animate({height:"+=35px", width:"+=35px"}, "fast");
+})
+
+// When the boxShrink button is clicked...
+$("#boxShrink").on("click", function() {
+	// Decrease the size of the box.
+	$("#box").animate({height:"-=35px", width:"-=35px"}, "fast");
+})
+
+boo js:
+
+$("#boxGrow").on(click, function() {
+	$("#box").animate({height:"+=35px", 
+		width:"+=35px"}, "fast");
+})
+
+Should be:
+// When the boxGrow button is clicked... 
+$("#boxGrow").on("click", function() {
+	// Increase the size of the box.
+	$("#box").animate({height:"+=35px", width:"+=35px"}, "fast");
+})
+
+
+$("#boxShrink").on(click, function() {
+	$("#box").animate({height:"-=35px", width:"-=35px"}, "fast");
+})
+
+
+Grumpy
+// When the factButton is clicked...
+$("#factButton").on("click", function() {
+	// We generate a random number between 0 and 4 (the number of facts in the catFactArray)
+	var number = Math.floor((Math.random() * catFactArray.length));
+	// We display the fact from the catFactArray that is in the random position we just generated.
+	$("#factText").text(catFactArray[number])
+})
+
+
+Boo:
+// When the factButton is clicked...
+$("#factButton").on("click", function() {
+	// We generate a random number between 0 and 4 (the number of facts in the booFactArray)
+	var number = Math.floor((Math.random() * booFactArray.length));
+	// We display the fact from the booFacts that is in the random position we just generated.
+	$("#factText").text(booFactArray[number])
+})
+
+
+
+var catFactArray = ["Grumpy was born on April 4, 2012", "Grumpy's unique look comes from feline dwarfism and an underbite", "Grumpy has a brother named Pokey", "Her favorite Friskies food is Savory Shreds"]
+
+// This array holds all of our Boo facts!
+var booFacts = ["Boo is a pomeranian", Boo's best friend is another pomeranian named Buddy", Boo the Pomeranian was born on March 16, making him a Pisces", Boo's favourite food is grass", Boo has released two books" ]
